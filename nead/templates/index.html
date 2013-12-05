@@ -623,9 +623,61 @@
 					<div class="row-fluid">
 						<div class="span8 offset2 well">
 							<a id="{{ n.id }}" class="noticia" href="#">
-								<h5>{{ n.titulo }}</h5>
+								<h5 class="titulo-noticia">{{ n.titulo }} | <span style="font-size:7pt;">{{ n.criado_em }}</span></h5>
 							</a>
 							<div id="noticia-{{ n.id }}" style="display:none; color:#08c"></div>
+						</div>
+					</div>
+					{% endfor %}
+					<div class="row-fluid">
+						<div class="span2 offset8 botao-todas-noticias">
+							<a href="#todas-noticias"><button class="btn btn-mini link-todas-noticias" type="button">Todas as Notícias</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="verde bordas visible-desktop"></div>
+				<div class="verde-escuro bordas visible-desktop"></div>
+			</div>
+			<div id="todas-noticias" class="noticias">
+				<div class="azul bordas"></div>
+				<div class="roxo bordas"></div>
+				<div class="conteudo">
+					<div class="row-fluid">
+						<div class="span10 offset1 well cabecalho">
+							<div class="span2"><img class="logo visible-desktop" src="assets/img/pronatec.png"></div>
+							<div class="span7"><h3>Núcleo de Educação a Distância - NEaD</h3></div>
+							<div class="span1"><a href="http://www.cafw.ufsm.br/" target="_blank"><img class="logo visible-desktop" src="assets/img/cafw.png"></a></div>
+							<div class="span1"><a href="http://www.ufsm.br/" target="_blank"><img class="logo visible-desktop" src="assets/img/ufsm.png"></a></div>
+							<div class="span1"><a href="http://ead.ctism.ufsm.br/moodle/login/index.php" target="_blank"><img class="logo visible-desktop" src="assets/img/moodle.png"></a></div>
+						</div>
+					</div>
+					<div class="row-fluid menu">
+						<nav class="cl-effect-4">
+							<a href="#inicio" data-hover="Início" class="span2 item-menu"><span>Início</span></a>
+							<a href="#sobre" data-hover="Sobre" class="span2 item-menu"><span>Sobre</span></a>
+							<a href="#cursos" data-hover="Cursos" class="span2 item-menu"><span>Cursos</span></a>
+							<a href="#tutores" data-hover="Tutores" class="span2 item-menu"><span>Tutores</span></a>
+							<a href="#polos" data-hover="Polos" class="span2 item-menu"><span>Polos</span></a>
+							<a href="#contato" data-hover="Contato" class="span2 item-menu"><span>Contato</span></a>
+						</nav>
+					</div>
+					{% for a in anos %}
+					<div class="row-fluid">
+						<div class="span8 offset2">
+							<h1 style="color:#08c">{{ a.year }}</h1>
+							<hr>
+							{% for n in todas_noticias %}
+								{% if a.year == n.criado_em.year %}
+								<div class="row-fluid">
+									<div class="span12 well">
+										<a id="{{ n.id }}" class="todas-noticia" href="#">
+											<h5 class="titulo-noticia">{{ n.titulo }} | <span style="font-size:7pt;">{{ n.criado_em }}</span></h5>
+										</a>
+										<div id="todas-noticia-{{ n.id }}" style="display:none; color:#08c"></div>
+									</div>
+								</div>
+								{% endif %}
+							{% endfor %}
 						</div>
 					</div>
 					{% endfor %}

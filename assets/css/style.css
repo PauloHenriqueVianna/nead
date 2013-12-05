@@ -64,6 +64,11 @@ body {
 	height: 100%;
 }
 
+.todas {
+	overflow-y: auto;
+	height: 100%;
+}
+
 .conteudo{
 	height: 98.4%;
 }
@@ -226,6 +231,18 @@ body {
 
 .mapa label { 
   width: auto; display:inline; 
+}
+
+.titulo-noticia {
+	margin: 5px 0 5px 0;
+}
+
+.botao-todas-noticias{
+	text-align: right;
+}
+
+.link-todas-noticias{
+	color: #08c;
 }
 
 .button {
