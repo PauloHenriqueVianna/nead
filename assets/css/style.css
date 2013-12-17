@@ -26,6 +26,11 @@ body {
 	text-align: justify;
 }
 
+.locais {
+	overflow-y: auto;
+	height: 100%;
+}
+
 .cursos { 
 	overflow-y: auto;
 	height: 100%;
@@ -196,6 +201,23 @@ body {
 	color: #483D8B;
 }
 
+/* Locais Prova */
+
+.local{
+	color: white;
+	background-color: #483D8B;
+	height: 210px;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+	opacity: 0.5;
+}
+
+.local:hover{
+	opacity: 1;
+}
+
 /* Polos */
 
 .polo{
@@ -303,7 +325,7 @@ input.button, button.button {
   -webkit-box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
-  width: 300px;
+  width: 220px;
   line-height: 100px;
   height: 100px;
   padding: 0px;

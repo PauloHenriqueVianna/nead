@@ -1,6 +1,6 @@
 $('#container').fullContent({
     stages: 'div',
-    mapPosition: [{v: 2, h: 2}, {v: 1, h: 2}, {v: 3, h: 2 }, {v: 3, h: 1}, {v: 3, h: 3}, {v: 2, h: 1}, {v: 2, h: 3}, {v: 4, h: 2}, {v: 5, h: 2}, {v: 6, h: 2}],
+    mapPosition: [{v: 3, h: 2}, {v: 2, h: 2}, {v: 1, h: 2}, {v: 4, h: 2 }, {v: 4, h: 1}, {v: 4, h: 3}, {v: 3, h: 1}, {v: 3, h: 3}, {v: 5, h: 2}, {v: 6, h: 2}, {v: 7, h: 2}],
     stageStart: 1,
     idComplement: 'page_'
 });
@@ -53,4 +53,16 @@ $(function() {
 		}
 	return false; 
   });  
+});
+
+$(function() {
+	$("a[rel=galeria]").fancybox({
+	
+					'transitionIn'		: 'none',
+					'transitionOut'		: 'none',
+					'titlePosition' 	: 'over',
+					'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+						return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+					}
+	});		
 });
