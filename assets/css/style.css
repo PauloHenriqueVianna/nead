@@ -5,6 +5,19 @@ body {
 	color:#483D8B; 
 }
 
+.modal{
+	left:34%;
+	width: 1024px;
+	height: 500px;
+}
+
+.modal-body {
+	position: relative;
+	width: 100%;
+	max-height: 500px;
+	padding: 0px;
+}
+
 .cabecalho{
 	height: 40%;
 	margin-top: 1%;
@@ -206,7 +219,7 @@ body {
 .local{
 	color: white;
 	background-color: #483D8B;
-	height: 210px;
+	height: 250px;
 	-webkit-transition: all 0.4s linear;
 	-moz-transition: all 0.4s linear;
 	-o-transition: all 0.4s linear;
